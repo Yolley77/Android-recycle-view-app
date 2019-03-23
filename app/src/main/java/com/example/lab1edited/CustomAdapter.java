@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,12 +26,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        Log.d("ADAPTER", "onCreateViewHolder");
         View view = inflater.inflate(R.layout.item, viewGroup, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        Log.d("ADAPTER", "onBindViewHolder ON POSITION" + String.valueOf(i));
         RowElement element = rowElements.get(i);
         //viewHolder.imageView.setImageResource(element.getImage());
         viewHolder.numberView.setText(element.getNumber());

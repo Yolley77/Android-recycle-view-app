@@ -1,9 +1,9 @@
 package com.example.lab1edited;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -19,6 +19,17 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 1 * 1000);
+        }, 3 * 1000);
+    }
+
+    /*@Override
+    public void onConfigurationChanged(Configuration newConfig) {
+
+    }*/
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        System.exit(0);
     }
 }

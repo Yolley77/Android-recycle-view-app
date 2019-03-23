@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setInitialData() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
             elements.add(new RowElement (converter.getNumberInWords(i + 1)));
         }
     }
