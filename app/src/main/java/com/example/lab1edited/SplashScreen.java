@@ -22,11 +22,6 @@ public class SplashScreen extends AppCompatActivity {
         }, 3 * 1000);
     }
 
-    /*@Override
-    public void onConfigurationChanged(Configuration newConfig) {
-
-    }*/
-
     @Override
     public void onBackPressed() {
         finish();
